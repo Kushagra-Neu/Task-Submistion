@@ -10,7 +10,7 @@ google_cloudrun_variables = { # Configuration for Google Cloud Run services.
     name     = "RNS-ID-CloudRun" # (Required) The name of the Cloud Run service. Changing this forces a new Cloud Run service to be created.
     location = "us-central1"     # (Required) The GCP region where the Cloud Run service should be deployed. Changing this forces a new Cloud Run service to be created.
     template = {
-      name = "gcr.io/my-project/my-image:latest" # (Required) The container image to deploy.
+      name = "gcr.io/RNS-project/RNS-image:latest" # (Required) The container image to deploy.
     }
     traffic = {
       percent         = 100  # (Required) The percentage of traffic to direct to the specified revision.

@@ -1,4 +1,4 @@
-resource "google_cloud_run_service" "cloudrun" {
+resource "google_cloud_run_service" "RNS_cloudrun" {
   for_each = var.google_cloudrun_variables
   name     = each.value.name
   location = each.value.location

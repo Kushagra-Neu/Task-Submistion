@@ -47,7 +47,7 @@ resource "google_compute_backend_service" "backend_service" {
 # HTTPS Forwarding Rule Configuration
 resource "google_compute_forwarding_rule" "https_frontend" {
   for_each    = var.load_balancer_variables
-  name        = "${each.value.name}-https-frontend"
+  name        = "${each.value.name}-RNS-https-frontend"
   ip_address  = each.value.frontend_ip
   ip_protocol = each.value.ip_protocol
   port_range  = each.value.port_range

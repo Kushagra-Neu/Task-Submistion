@@ -1,4 +1,4 @@
-resource "google_sql_database_instance" "my_instance" {
+resource "google_sql_database_instance" "RNS_instance" {
   name             = var.db_instance.name
   database_version = var.db_instance.database_version
   region           = var.db_instance.region
@@ -16,17 +16,17 @@ resource "google_sql_database_instance" "my_instance" {
   }
 }
 
-resource "google_sql_database" "my_database" {
+resource "google_sql_database" "RNS_database" {
   name     = var.db_instance.db_name
-  instance = google_sql_database_instance.my_instance.name
+  instance = google_sql_database_instance.RNS_instance.name
 }
 
 resource "google_sql_user" "root" {
   name     = "root"
-  instance = google_sql_database_instance.my_instance.name
+  instance = google_sql_database_instance.RNS_instance.name
   password = var.db_instance.root_password
 
   depends_on = [
-    google_sql_database_instance.my_instance
+    google_sql_database_instance.RNS_instance
   ]
 }
