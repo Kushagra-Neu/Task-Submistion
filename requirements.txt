@@ -1,0 +1,8 @@
+Flask
+Flask-Migrate
+Flask-SQLAlchemy
+prometheus_client
+psycopg2-binary
+Flask-RESTful
+Flask-Prometheus
+prometheus-flask-exporter

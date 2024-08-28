@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: my-app
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  name: ""
+  annotations: {}
+  path: /
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
+
+resources: {}
+
+database:
+  url: "cG9zdGdyZXM6Ly91c2VyOnBhc3N3b3JkQG1vcmUvbXlkYXRhYmFzZQ=="
